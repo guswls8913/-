@@ -20,19 +20,16 @@ if a != 0 and vf!=0 :
     
     
 if a == 0 :
-    a = (vf - vi) / t
-    d = (vf**2 - vi**2) / (2*a)
-    print("가속도는", a, "m/s^2 입니다.")
-    print("이동거리는", abs(d), "m 입니다.")
+   d=vi*t
     #그래프부
     plt.plot([0,t],[vi,vf]) 
     plt.xlabel('time(s)') 
     plt.ylabel('velocity(m/s)')
-    plt.title('등가속도 운동 그래프') 
+    plt.title('등가속도 운동 시간-속도 그래프') 
     plt.show()
     
     x = np.arange(0, t, 0.01)
-    y = vi*x + 0.5*a*x**2
+    y = vi
     plt.plot(x,y)
     plt.xlabel('time(s)')
     plt.ylabel('distance(m)')
